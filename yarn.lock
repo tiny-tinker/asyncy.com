@@ -327,9 +327,9 @@ asyncy-player@^0.0.1:
     raven-js "^3.26.4"
     url-polyfill "^1.0.14"
 
-asyncy-vue@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/asyncy-vue/-/asyncy-vue-0.0.11.tgz#c29782ef881f7abb3035a7171761815afceedd38"
+asyncy-vue@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/asyncy-vue/-/asyncy-vue-0.0.13.tgz#c883484954a7591b2f803668e7f9f2966943eb66"
   dependencies:
     asyncy-player "^0.0.1"
     loadjs "^3.5.4"

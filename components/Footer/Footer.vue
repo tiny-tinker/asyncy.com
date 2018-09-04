@@ -3,12 +3,12 @@
     <div class="container">
 			<h1 class="display-1 text-center text-white mb-3">Time to write your story 🎉</h1>
 			<h4 class="display-4 text-center text-white mb-5">Schedule a demo and build 3 applications in 15 minutes.</h4>
-			<form class="d-flex mb-5">
-				<div class="row w-100">
-					<div class="col-8 col-md-9 col-lg-6 offset-lg-2">
+			<form class="row mb-5">
+				<div class="col-12 col-lg-8 offset-lg-2 d-flex">
+					<div class="flex-grow-1 pl-3 pr-3">
 						<a-input placeholder="Enter Email" inputClasses="bg-dark border-0" />
 					</div>
-					<div class="col-4 col-md-3 col-lg-2">
+					<div>
 						<a-button type="neutral" class="w-100">Join Beta</a-button>
 					</div>
 				</div>
@@ -21,7 +21,7 @@
 						<li class="li"><a href='https://docs.asyncy.com'>Documentation</a></li>
 						<li class="li"><a href='https://docs.asyncy.com/faq'>FAQ</a></li>
 						<li class="li">
-								<a href="https://asyncy.click/feedback" target="_blank" rel="noopener">Give Feedback</a>
+              <a href="https://asyncy.click/feedback" target="_blank" rel="noopener">Give Feedback</a>
 						</li>
 					</ul>
 				</div>
@@ -96,8 +96,9 @@ export default {
 
 <style scoped lang="scss">
 .app-footer {
+  background: url('../../assets/img/footer.jpg') no-repeat;
+  background-size: cover;
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  background: url('../../assets/img/footer.jpg');
   font-size: 0.9em;
   padding-top: 75px;
   padding-bottom: 55px;

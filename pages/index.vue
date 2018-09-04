@@ -6,18 +6,25 @@
         <h3 class="text-muted text-center mb-5">
           Supercharge developers to build and scale applications lightning fast ⚡
         </h3>
-        <form class="d-flex mb-5">
-          <div class="row w-100">
-            <div class="col-8 col-md-9 col-lg-6 offset-lg-2">
-              <a-input placeholder="Enter Email" inputClasses="bg-light border-none" />
+
+        <form class="row mb-5">
+          <div class="col-12 col-lg-8 offset-lg-2 d-flex">
+            <div class="flex-grow-1 pl-3 pr-3">
+              <a-input placeholder="Enter Email" inputClasses="bg-light border-none text-dark" />
             </div>
-            <div class="col-4 col-md-3 col-lg-2">
-              <a-button type="default" class="w-100">Join Beta</a-button>
+            <div>
+              <a-button type="default">Join Beta</a-button>
             </div>
           </div>
         </form>
+
         <a-player class="intro-video">
-          <video :src="introVideo"></video>
+          <div class="plyr__video-embed">
+          <iframe
+              src="https://player.vimeo.com/video/89527215?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+              allowfullscreen allowtransparency allow="autoplay">
+            </iframe>
+          </div>
         </a-player>
       </div>
     </section>
@@ -34,20 +41,20 @@
                 <div class="left-part">
                   <div class="row">
                     <div class="col-12">
-                      <img class="w-100" :src="images.repl" role="presentation" alt="asyncy examples">
+                      <img class="w-100" src="@/assets/img/repl.png" role="presentation" alt="asyncy examples">
                     </div>
                   </div>
                   <div class="row mt-3">
                     <div class="col-6">
-                      <img class="w-100" :src="images.logs" role="presentation" alt="asyncy examples">
+                      <img class="w-100" src="@/assets/img/logs.png" role="presentation" alt="asyncy examples">
                     </div>
                     <div class="col-6">
-                      <img class="w-100" :src="images.metrics" role="presentation" alt="asyncy examples">
+                      <img class="w-100" src="@/assets/img/metrics.png" role="presentation" alt="asyncy examples">
                     </div>
                   </div>
                 </div>
                 <div class="right-part">
-                  <img class="w-100" v-bind:src="images.slack"/>
+                  <img class="w-100" src="@/assets/img/slack.png"/>
                 </div>
               </div>
             </a-tab-pane>
@@ -130,7 +137,7 @@
           <div class="col-sm-12 col-lg-6" v-for="benefit in benefits" :key = "benefit.id" >
             <a-card class="flex-row">
               <template slot="header">
-                <img :src="images.benefitPlaceholder" alt="asyncy benefit">
+                <img src="@/assets/img/benefit-placeholder.svg" alt="asyncy benefit">
               </template>
               <h4 class="display-4">{{benefit.title}}</h4>
               <p>{{benefit.description}}</p>
@@ -143,11 +150,11 @@
     </section>
 
     <section class="open-source-section">
-      <img :src="images.nebula">
+      <img src="@/assets/img/nebula.png">
       <div class="container">
         <div class="content">
           <h3 class="color-white mb-4">WE ARE <strong>OPEN</strong> SOURCE</h3>
-          <h4 class="display-4 color-white">Platfrom   •   Language   •   Standards   •   Cloud</h4>
+          <h4 class="display-4 color-white text-center">Platfrom   •   Language   •   Standards   •   Cloud</h4>
         </div>
       </div>
     </section>
@@ -155,41 +162,15 @@
 </template>
 
 <script>
-  import introVideo from '../assets/video/BigBuckBunny.mp4';
-  import repl from '../assets/img/repl.png';
-  import metrics from '../assets/img/metrics.png';
-  import logs from '../assets/img/logs.png';
-  import slack from '../assets/img/slack.png';
-  import hoverPoint from '../assets/img/hover-point.png';
-  import storyscript from '../assets/img/storyscript.png';
-  import storyscriptLeft from '../assets/img/storyscript-left.png';
-  import storyscriptRight from '../assets/img/storyscript-right.png';
-  import dashboard from '../assets/img/dashboard.png';
-  import hub from '../assets/img/hub.png';
-  import benefitPlaceholder from '../assets/img/benefit-placeholder.svg';
-  import nebula from '../assets/img/nebula.png';
+  import storyscript from '@/assets/img/storyscript.png';
+  import storyscriptLeft from '@/assets/img/storyscript-left.png';
+  import storyscriptRight from '@/assets/img/storyscript-right.png';
+  import dashboard from '@/assets/img/dashboard.png';
+  import hub from '@/assets/img/hub.png';
 
   export default {
-    components: {
-
-    },
     data() {
       return {
-        introVideo,
-        images: {
-          repl,
-          metrics,
-          logs,
-          slack,
-          hoverPoint,
-          storyscript,
-          dashboard,
-          hub,
-          storyscriptLeft,
-          storyscriptRight,
-          benefitPlaceholder,
-          nebula
-        },
         benefits: [
           {
             id: '1',
@@ -290,7 +271,7 @@
   }
 
   .cards-section {
-    padding: 50px 0;
+    padding: 90px 0;
     overflow: hidden;
 
     .cards {
@@ -356,10 +337,13 @@
     }
 
     .card-header {
+      display: flex;
       background-color: transparent;
       border-bottom: none;
       align-items: center;
-      display: flex;
+      justify-content: center;
+      padding: 1.25rem 0.5rem;
+      height: 100%;
 
       @media screen and (max-width: 767px) {
         img {
@@ -378,7 +362,7 @@
 
       @media screen and (max-width: 767px) {
         width: unset !important;
-        min-height: 300px;
+        height: 380px;
       }
     }
 
@@ -395,7 +379,11 @@
       justify-content: center;
 
       @media screen and (max-width: 767px) {
-        padding-top: 45%;
+        padding-top: 30%;
+      }
+
+      @media screen and (max-width: 413px) {
+        padding-top: 50%;
       }
     }
   }

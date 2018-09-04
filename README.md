@@ -1,6 +1,6 @@
-# {{ name }}
+# asyncy-v3
 
-> {{ description }}
+> Asyncy marketing website
 
 ## Build Setup
 

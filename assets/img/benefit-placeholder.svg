@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="132" viewBox="0 0 132 132">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #a100ff;
+        stroke-width: 12px;
+      }
+    </style>
+  </defs>
+  <circle id="icon_placeolder" data-name="icon placeolder" class="cls-1" cx="66" cy="66" r="60"/>
+</svg>
